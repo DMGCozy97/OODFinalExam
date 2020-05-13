@@ -16,8 +16,8 @@ namespace DataManagement
 
             using (db)
             {
-                Phone p1 = new Phone("Samsung S20", 500, "Android", "/images/android.png", "images/s20.jpg");
-                Phone p2 = new Phone("iPhone 11", 600, "IOS", "/images/apple.png", "images/iphone11.jpg");
+                Phone p1 = new Phone("Samsung S20", 500, "Android", "/images/images/android.png", "/images/images/s20.jpg");
+                Phone p2 = new Phone("iPhone 11", 600, "IOS", "/images/images/apple.png", "/images/images/iphone11.png");
 
 
 

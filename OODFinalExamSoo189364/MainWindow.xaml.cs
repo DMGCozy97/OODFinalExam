@@ -31,8 +31,13 @@ namespace OODFinalExamSoo189364
         {
             var query = from p in db.Phones
                         select p.Name;
+                        
 
             var phones = query.ToList();
+
+            var query1 = from p in db.Phones
+                         select p.OSImage;
+            var phones1 = query.ToList();
 
             Phoneslbx.ItemsSource = query.ToList();
         }
@@ -46,7 +51,7 @@ namespace OODFinalExamSoo189364
                 //take action
 
                 Pricetxtblk.Text = selected.Price.ToString();
-                var uri = new Uri("pack://application:,,,/images/" + selected.PhoneImage);
+                var uri = new Uri("pack://application:,,,/images/images" + selected.PhoneImage);
                 Phoneimg.Source = new BitmapImage(uri);
             }
         }
