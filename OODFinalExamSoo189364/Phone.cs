@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,8 @@ namespace OODFinalExamSoo189364
         public string OSImage { get; set; }
         public string PhoneImage { get; set; }
 
-
+        public int ID { get; set; }
+        public virtual Phone phone { get; set; }
 
 
         //ctor
@@ -25,10 +27,10 @@ namespace OODFinalExamSoo189364
             this.Price = price;
             this.OperatingSystem = operatingSystem;
             this.OSImage = osImage;
-            this.PhoneImage = phoneImage
+            this.PhoneImage = phoneImage;
         }
 
-
+        public virtual List<Phone> Phones { get; set ;}
 
 
         //Methods
@@ -36,5 +38,14 @@ namespace OODFinalExamSoo189364
         {
             Price = Price + (Price * percent);
         }
+
+        public class PhoneData : DbContext
+        {
+            public PhoneData() : base("MyPhoneData") { }
+
+            public DbSet<Phone> Phones { get; set; }
+
+        }
+
     }
 }

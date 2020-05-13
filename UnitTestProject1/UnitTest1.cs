@@ -1,29 +1,29 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿//using System;
+//using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using OODFinalExamSoo189364;
+//using OODFinalExamSoo189364;
 
-namespace UnitTestProject1
-{
-    [TestClass]
-    public class UnitTest1
-    {
-        [TestMethod]
-        public void TestPercentage()
-        {
-            //Arrange
+//namespace UnitTestProject1
+//{
+//    [TestClass]
+//    public class UnitTest1
+//    {
+//        //[TestMethod]
+//        //public void TestPercentage()
+//        //{
+//        //    //Arrange
 
-            Phone price1 = new Phone();
+//        //    Phone price1 = new Phone()
 
-            decimal finalPrice = 570;
+//        //    decimal finalPrice = 570;
 
 
-            //act
-            price1.IncreasePrice(3);
+//        //    //act
+//        //    price1.IncreasePrice(3);
 
-            //assert
-            Assert.AreEqual(finalPrice, price1.Price);
+//        //    //assert
+//        //    Assert.AreEqual(finalPrice, price1.Price);
 
-        }
-    }
-}
+//        }
+//    }
+//}
