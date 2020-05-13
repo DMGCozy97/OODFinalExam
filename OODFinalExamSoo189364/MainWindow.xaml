@@ -6,5 +6,9 @@
         xmlns:local="clr-namespace:OODFinalExamSoo189364"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid/>
+    <Grid>
+        <ListBox x:Name="Phoneslbx" HorizontalAlignment="Left" Height="252" Margin="90,103,0,0" VerticalAlignment="Top" Width="180" Loaded="Phoneslbx_Loaded" SelectionChanged="Phoneslbx_SelectionChanged"/>
+        <TextBlock x:Name="Pricetxtblk" HorizontalAlignment="Left" Margin="472,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="83"/>
+        <Image x:Name="Phoneimg" HorizontalAlignment="Left" Height="188" Margin="455,167,0,0" VerticalAlignment="Top" Width="184"/>
+    </Grid>
 </Window>

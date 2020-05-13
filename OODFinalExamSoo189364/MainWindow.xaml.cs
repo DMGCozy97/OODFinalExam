@@ -20,9 +20,35 @@ namespace OODFinalExamSoo189364
     /// </summary>
     public partial class MainWindow : Window
     {
+        Phone.PhoneData db = new Phone.PhoneData();
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Phoneslbx_Loaded(object sender, RoutedEventArgs e)
+        {
+            var query = from p in db.Phones
+                        select p.Name;
+
+            var phones = query.ToList();
+
+            Phoneslbx.ItemsSource = query.ToList();
+        }
+
+        private void Phoneslbx_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Phone selected = Phoneslbx.SelectedItem as Phone;
+
+            if (selected != null)
+            {
+                //take action
+
+                Pricetxtblk.Text = selected.Price.ToString();
+                var uri = new Uri("pack://application:,,,/images/" + selected.PhoneImage);
+                Phoneimg.Source = new BitmapImage(uri);
+            }
         }
     }
 }
